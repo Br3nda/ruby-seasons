@@ -54,14 +54,11 @@ Gem::Specification.new do |s|
       s.add_dependency('bundler', ['~> 1.2'])
       s.add_dependency('jeweler', ['~> 1.8.4'])
       s.add_dependency('rdoc', ['~> 3.12'])
-      s.add_dependency('rspec', ['~> 2.8.0'])
+      s.add_dependency('rspec', ['~> 3.8.0'])
       s.add_dependency('simplecov', ['>= 0'])
     end
   else
-    s.add_dependency('rspec', ['~> 2.8.0'])
-    s.add_dependency('rspec', ['~> 2.8.0'])
-    s.add_dependency('rspec', ['~> 2.8.0'])
-    s.add_dependency('rspec', ['~> 2.8.0'])
+    s.add_dependency('rspec', ['~> 3.8.0'])
     s.add_dependency('simplecov', ['>= 0'])
   end
 end
