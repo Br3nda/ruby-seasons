@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/julescopeland/ruby-seasons'
   s.licenses = ['MIT']
   s.require_paths = ['lib']
-  s.rubygems_version = '1.8.25'
+  s.rubygems_version = '2.0.0'
   s.summary = 'Get the season name from a date or datetime object'
 
   if s.respond_to? :specification_version
