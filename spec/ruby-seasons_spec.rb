@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "RubySeasons" do
-  context "Date objects" do
+describe 'RubySeasons' do
+  context 'Date objects' do
     it "should return 'spring' for my birthday" do
       my_birthday = Date.parse('28th May 1980')
       my_birthday.season.should == 'spring'
@@ -11,7 +13,7 @@ describe "RubySeasons" do
     end
   end
 
-  context "DateTime objects" do
+  context 'DateTime objects' do
     it "should return 'summer' for my mum's birthday" do
       my_birthday = DateTime.parse('12th September 1946 12:27PM')
       my_birthday.season.should == 'summer'

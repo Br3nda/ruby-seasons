@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'csv'
 module RubySeasons
   module ClassMethods
-    @@lookup_file = File.expand_path('../../lookup_tables/london_seasons.csv', __FILE__)
+    @@lookup_file = File.expand_path('../lookup_tables/london_seasons.csv', __dir__)
 
     def season_lookup_table
       @@season_lookup_table ||= get_season_lookup_table
@@ -22,15 +24,16 @@ module RubySeasons
     end
 
     private
+
     def get_season_lookup_table
       @@season_lookup_table = {}
 
       CSV.foreach(@@lookup_file) do |row|
         @@season_lookup_table[row[0]] = {
-          spring_start: DateTime.parse(row[0] +' '+ row[1]),
-          summer_start: DateTime.parse(row[0] +' '+ row[2]),
-          autumn_start: DateTime.parse(row[0] +' '+ row[3]),
-          winter_start: DateTime.parse(row[0] +' '+ row[4])
+          spring_start: DateTime.parse(row[0] + ' ' + row[1]),
+          summer_start: DateTime.parse(row[0] + ' ' + row[2]),
+          autumn_start: DateTime.parse(row[0] + ' ' + row[3]),
+          winter_start: DateTime.parse(row[0] + ' ' + row[4])
         }
       end
       @@season_lookup_table
