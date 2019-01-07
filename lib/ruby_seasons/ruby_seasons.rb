@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-
 require 'csv'
+
 module RubySeasons
   module ClassMethods
     @@lookup_file = File.expand_path('../lookup_tables/london_seasons.csv', __dir__)
@@ -10,7 +10,10 @@ module RubySeasons
     end
 
     def get_season(date, hemisphere)
+
       datetime = date.class == DateTime ? date : DateTime.parse(date.to_s)
+      datetime = datetime >> 6 if hemisphere == :south
+
       year = datetime.strftime('%Y')
       if (season_lookup_table[year][:spring_start]..season_lookup_table[year][:summer_start]).cover?(datetime)
         'spring'

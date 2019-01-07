@@ -16,9 +16,11 @@ describe 'RubySeasons' do
   context 'DateTime objects' do
     it "should return 'summer' for my mum's birthday" do
       expect(DateTime.parse('12th September 1946 12:27PM').season(:north)).to eq 'summer'
+      expect(DateTime.parse('12th September 1946 12:27PM').season(:south)).to eq 'winter'
     end
     it "should parse my dad's birthday and return 'autumn'" do
       expect(DateTime.get_season('5th November 1944 13:42PM', :north)).to eq 'autumn'
+      expect(DateTime.get_season('5th November 1944 13:42PM', :south)).to eq 'spring'
     end
   end
 end
