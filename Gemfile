@@ -11,7 +11,7 @@ group :development do
   gem 'bundler', '~> 1.2'
   gem 'jeweler', '~> 1.8.4'
   gem 'rdoc', '~> 3.12'
-  gem 'rspec', '~> 2.8.0'
+  gem 'rspec'
   gem 'rubocop'
   gem 'simplecov'
 end
