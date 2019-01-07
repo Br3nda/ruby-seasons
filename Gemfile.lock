@@ -8,7 +8,7 @@ GEM
       git (>= 1.2.5)
       rake
       rdoc
-    json (1.7.7)
+    json (1.8.6)
     multi_json (1.6.0)
     rake (10.0.3)
     rdoc (3.12.1)
@@ -35,3 +35,6 @@ DEPENDENCIES
   rdoc (~> 3.12)
   rspec (~> 2.8.0)
   simplecov
+
+BUNDLED WITH
+   1.16.6
