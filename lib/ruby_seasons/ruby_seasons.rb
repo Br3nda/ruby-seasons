@@ -9,7 +9,7 @@ module RubySeasons
       @@season_lookup_table ||= get_season_lookup_table
     end
 
-    def get_season(date)
+    def get_season(date, hemisphere)
       datetime = date.class == DateTime ? date : DateTime.parse(date.to_s)
       year = datetime.strftime('%Y')
       if (season_lookup_table[year][:spring_start]..season_lookup_table[year][:summer_start]).cover?(datetime)
@@ -42,8 +42,8 @@ module RubySeasons
   end
 
   module InstanceMethods
-    def season
-      ClassMethods.get_season(self)
+    def season(hemisphere)
+      ClassMethods.get_season(self, hemisphere)
     end
   end
 
